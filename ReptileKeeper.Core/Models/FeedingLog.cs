@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,10 @@ namespace ReptileKeeper.Core.Models
         public int QuantityFed { get; set; }
 
         [Required]
-        public Reptile? ReptileFed { get; set; }
+        public int ReptileFedId { get;set; }
+
+        [ForeignKey("ReptileFedId")]
+        public virtual Reptile ReptileFed { get; set; }
 
         private DateTime SetDateOfNextFeed(double feedingFrequencyInDays)
         {

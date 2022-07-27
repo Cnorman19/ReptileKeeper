@@ -32,6 +32,6 @@ namespace ReptileKeeper.Core.Models
         [Required]
         public string ScientificName { get; set; } = string.Empty;
 
-        public List<FeedingLog> FeedingLogs { get; set; }
+        public IList<FeedingLog> FeedingLogs { get; set; }
     }
 }
