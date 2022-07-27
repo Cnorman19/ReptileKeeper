@@ -11,7 +11,7 @@ namespace ReptileKeeper.Core.Models
     public class FeedingLog
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public bool AteSuccessfully { get; set; } = true;
 
@@ -27,7 +27,7 @@ namespace ReptileKeeper.Core.Models
         public int QuantityFed { get; set; }
 
         [Required]
-        public int ReptileFedId { get;set; }
+        public string ReptileFedId { get;set; }
 
         [ForeignKey("ReptileFedId")]
         public virtual Reptile ReptileFed { get; set; }

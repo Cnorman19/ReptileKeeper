@@ -12,10 +12,10 @@ namespace ReptileKeeper.Core.Models
     public class Reptile
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
-        public int OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
         [ForeignKey("OwnerId")]
         public virtual ApplicationUser Owner { get; set; }

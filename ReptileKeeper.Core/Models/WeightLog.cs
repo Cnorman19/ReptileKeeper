@@ -10,7 +10,7 @@ namespace ReptileKeeper.Core.Models
     public class WeightLog
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         public DateTime DateWeighed { get; set; }

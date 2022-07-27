@@ -12,7 +12,7 @@ namespace ReptileKeeper.Core.Models.Achievements.Trophies
     public class Trophy
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         public string Title { get; set; }
@@ -27,7 +27,7 @@ namespace ReptileKeeper.Core.Models.Achievements.Trophies
         public DateTime DateAcquired { get; set; }
 
         [Required]
-        public int RecipientId { get; set; }
+        public string RecipientId { get; set; }
 
         [ForeignKey("RecipientId")]
         public virtual ApplicationUser Recipient { get; set; }
