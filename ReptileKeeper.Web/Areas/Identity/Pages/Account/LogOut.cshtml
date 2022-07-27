@@ -1,7 +1,10 @@
 ﻿@page
 @using Microsoft.AspNetCore.Identity
+@using ReptileKeeper.Core.Models
+@using ReptileKeeper.Web.Areas.Identity;
+@using ReptileKeeper.Core.Models.Areas.Identity.Account
 @attribute [IgnoreAntiforgeryToken]
-@inject SignInManager<IdentityUser> SignInManager
+@inject SignInManager<ApplicationUser> SignInManager
 @functions {
     public async Task<IActionResult> OnPost()
     {
