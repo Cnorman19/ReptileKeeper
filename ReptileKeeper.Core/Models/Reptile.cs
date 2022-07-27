@@ -27,11 +27,17 @@ namespace ReptileKeeper.Core.Models
         public int FeedFrequencyInDays;
 
         [Required]
+        public decimal WeightInGrams { get; set; }
+
+        [Required]
         public string Type { get; set; } = string.Empty;
 
         [Required]
         public string ScientificName { get; set; } = string.Empty;
 
         public IList<FeedingLog> FeedingLogs { get; set; }
+
+        public IList<WeightLog> WeightLogs { get; set; }
+
     }
 }
