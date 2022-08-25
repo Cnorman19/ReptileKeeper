@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReptileKeeper.DataAccess\ReptileKeeper.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
